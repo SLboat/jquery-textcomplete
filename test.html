@@ -4,9 +4,6 @@
         <title>自动完成测试框 - 使用jQuery.textcomplete</title>
 
         <link href="media/stylesheets/dropmenu.css" rel="stylesheet"/>
-        <link href="media/stylesheets/font-awesome.css" rel="stylesheet"/>
-        <link href="media/stylesheets/main.css" rel="stylesheet"/>
-        <link href="media/stylesheets/shCoreDefault.css" rel="stylesheet"/>
 
         <script src="media/javascripts/jquery-1.10.2.js"></script>
         <!-- <script src="media/javascripts/zepto-1.0.js"></script> -->
@@ -36,23 +33,7 @@
             <h2>Demo</h2>
             <h3>Insert Cursor After Autocomplete</h3>
             <div><textarea id="textarea2" rows="4" style="display: block; width: 100%;"></textarea></div>
-<pre class="brush: js; scripta">
-var elements = ['nowiki', 'code', 'span', 'div', 'h1', 'h2', 'h3'];
-$('#textarea2').textcomplete({
-    html: {
-        match: /<(\w*)$/,
-        search: function (term, callback) {
-            callback($.map(elements, function (element) {
-                return element.indexOf(term) === 0 ? element : null;
-            }));
-        },
-        index: 1,
-        replace: function (element) {
-            return ['&lt;' + element + '&gt;', '&lt;/' + element + '&gt;'];
-        }
-    }
-});
-</pre>
+
             <h2>License</h2>
             <p>
                 MIT
